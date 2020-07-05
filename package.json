@@ -1,0 +1,16 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "repository": "git@github.com:danielccunha/understanding-typescript.git",
+  "author": "Daniel Cunha <danielcunha54@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server --baseDir='src'",
+    "build": "tsc src/app.ts"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "typescript": "^3.9.6"
+  }
+}
