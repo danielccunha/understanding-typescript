@@ -6,8 +6,9 @@
   "author": "Daniel Cunha <danielcunha54@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "lite-server --baseDir='src'",
-    "build": "tsc --watch"
+    "start": "lite-server",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "devDependencies": {
     "lite-server": "^2.5.4",

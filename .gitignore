@@ -117,3 +117,7 @@ dist
 
 # Generated files
 src/**/*.js
+src/**/*.js.map
+
+# VSCode settings
+.vscode/settings.json
