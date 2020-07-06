@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "lite-server --baseDir='src'",
-    "build": "tsc src/app.ts"
+    "build": "tsc --watch"
   },
   "devDependencies": {
     "lite-server": "^2.5.4",
