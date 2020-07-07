@@ -21,8 +21,23 @@ class ITDepartment extends Department {
 }
 
 class AccountingDepartment extends Department {
+  private _lastReport: string;
+
+  get lastReport() {
+    if (this._lastReport) {
+      return this._lastReport;
+    }
+
+    throw new Error('No report found.');
+  }
+
+  set lastReport(value: string) {
+    this._lastReport = value;
+  }
+
   constructor(id: string, private reports: string[] = []) {
     super(id, 'Accounting');
+    this._lastReport = reports.length ? reports[reports.length - 1] : '';
   }
 
   addEmployee(name: string) {
@@ -45,7 +60,6 @@ class AccountingDepartment extends Department {
 const it = new ITDepartment('IT', ['Daniel']);
 console.log(it);
 
-const accounting = new AccountingDepartment('ACC');
-accounting.addEmployee('Daniel');
-accounting.addEmployee('Daniel');
-console.log(accounting);
+const accounting = new AccountingDepartment('ACC', ['Lorem ipsum']);
+accounting.lastReport = 'Some random report';
+console.log(accounting, accounting.lastReport);
