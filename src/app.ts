@@ -1,8 +1,22 @@
-const button = document.querySelector('button');
+class Department {
+  private employees: string[];
 
-function clickHandler(message: string) {
-  console.log('Clicked:', message);
+  constructor(private id: string, public name: string) {
+    this.employees = [];
+  }
+
+  describe() {
+    console.log(`Department ${this.id}: ${this.name}`);
+  }
+
+  addEmployee(name: string) {
+    this.employees.push(name);
+  }
 }
 
-// This comment will be ignored
-button?.addEventListener('click', clickHandler.bind(null, 'Something'));
+const department = new Department('ACC', 'Accounting');
+
+department.describe();
+department.addEmployee('Rose');
+
+console.log(department);
