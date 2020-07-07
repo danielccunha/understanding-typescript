@@ -1,9 +1,12 @@
 class Department {
+  static readonly fiscalYear = 2020;
   protected employees: string[];
 
   constructor(private readonly id: string, public name: string) {
     this.employees = [];
   }
+
+  static createEmployee = (name: string) => ({ name });
 
   describe() {
     console.log(`Department ${this.id}: ${this.name}`);
@@ -63,3 +66,5 @@ console.log(it);
 const accounting = new AccountingDepartment('ACC', ['Lorem ipsum']);
 accounting.lastReport = 'Some random report';
 console.log(accounting, accounting.lastReport);
+
+console.log(Department.createEmployee('Daniel'));
