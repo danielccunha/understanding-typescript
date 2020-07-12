@@ -1,6 +1,6 @@
 <div align="center">
   <h1>understanding-typescript</h1>
-  <p>Projects developed in a TypeScript course on Udemy</p>
+  <p>Projects developed during a TypeScript course on Udemy</p>
 </div>
 
 ## :link: Resources
