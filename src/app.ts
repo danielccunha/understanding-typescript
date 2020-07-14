@@ -94,3 +94,10 @@ function moveAnimal(animal: Animal) {
 
 const horse: Horse = { type: 'horse', runningSpeed: 10 };
 moveAnimal(horse);
+
+// Type Casting
+// const userInput = <HTMLInputElement>document.getElementById('message-output')!;
+const userInput = document.getElementById('user-input');
+if (userInput instanceof HTMLInputElement) {
+  userInput.value = 'Hi there!';
+}
