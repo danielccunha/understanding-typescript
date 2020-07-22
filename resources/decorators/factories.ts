@@ -4,7 +4,16 @@ function Logger(prefix: string) {
   };
 }
 
+function WithTemplate(template: string, hookId: string) {
+  return function (_constructor: Function) {
+    console.log(
+      `Rendering template: { template: ${template}, hookId: ${hookId}}`
+    );
+  };
+}
+
 @Logger('PERSON')
+@WithTemplate('<h1>Hey there</h1>', 'app')
 class Person {
   public readonly name: string;
 
